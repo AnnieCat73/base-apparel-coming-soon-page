@@ -8,6 +8,12 @@ html {
 	font-size: 16px;
 }
 
+:root {
+	--black: #423a3a;/* color: var(--black);*/
+	--brown: #ce9898;
+	--peach: #ee8b8b;
+}
+
 body {
 	font-family: 'Josefin Sans', sans-serif;
 }
