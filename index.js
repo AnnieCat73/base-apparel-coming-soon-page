@@ -1,4 +1,6 @@
-const form = document.getElementById("form");
+//NEED MORE WORK Either this 1 or
+
+/*const form = document.getElementById("form");
 const formControl = document.querySelector(".form-control");
 const email = document.querySelector("#email");
 
@@ -12,6 +14,8 @@ form.addEventListener("submit", function (e) {
   checkInputs();
   formInput.value = "";
 });
+
+
 
 function checkInputs () {
   //get value and remove the whitespace
@@ -47,7 +51,49 @@ function setSuccessFor(input) {
 	
 function isEmail(email) {
 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}*/
+
+// 2
+const form = document.getElementById("form");
+const formControl = document.querySelector(".form-control");
+const email = document.querySelector(".email");
+const error = document.querySelector(".error");
+console.log(error);
+const errorImg = document.querySelector(".error_img");
+console.log(errorImg);
+const arrowBtn = document.querySelector(".submit-arrow");
+const formInput = document.querySelector("input");
+//console.log(form);
+
+form.addEventListener("submit", function (e) {
+  //console.log(e);
+  e.preventDefault;
+
+  checkInputs();
+});
+
+function checkInputs () {
+  //get value and remove the whitespace
+  const emailValue = email.value.trim();
+  const reg = '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)';
+  if (emailValue === '') {
+    error.innerHTML = "Please provide a valid email";
+    errorImg.style.visibility = "visible";
+  } else if (emailValue.includes(reg)) {
+    error.innerHTML = "Please provide a valid email";
+    email.classList.add("invalid");
+    
+  } else {
+    error.innerHTML = "";
+    email.classList.remove("invalid");
+    errorImg.style.visibility ="hidden";
+  }
 };
+
+function isEmail(email) {
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+};
+
 
 
 

@@ -261,5 +261,23 @@ button {
 	margin-left: 22%;
 }
 
+#error_img {
+	position: absolute;
+	right: 90px;
+	top: 20px;
+	width: 1rem;
+	height: 1rem;
+	visibility: hidden;
+}
+
+
+#error {
+	color: #f96464;
+}
+
+.invalid {
+	border: 2px solid #F96464;
+}
+
 
 
