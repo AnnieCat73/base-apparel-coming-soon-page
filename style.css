@@ -1,22 +1,15 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box,
+	box-sizing: border-box;
 }
 
 html {
 	font-size: 16px;
 }
 
-:root {
-	--black: #423a3a;/* color: var(--black);*/
-	--brown: #ce9898;
-	--peach: #ee8b8b;
-}
-
 body {
 	font-family: 'Josefin Sans', sans-serif;
-	
 	background: rgb(255,255,255);
 	background: linear-gradient(220deg, rgba(255,255,255,1) 0%, rgba(255,244,244,1) 100%);
 }
@@ -30,6 +23,9 @@ img {
 	height: 100%;
 }
 
+/* Mobile Styles */
+
+
 .container {
 	height: 100vh;
 	width: 23.438rem;
@@ -38,17 +34,13 @@ img {
 /*Header*/
 
 .logo {
-	width: 6.25rem;
-	height: 1.306rem;
-	padding: 1.93rem 0 1.93rem 2rem;
-	
+	background-image: url(./images/logo.svg);
+	background-repeat: no-repeat;
+	width: 10rem;
+	height: 2rem;
+	margin: 1.93rem 0 1.93rem 1.8rem;
 }
 
-.logo img {
-	background: rgb(151,151,151);
-	background: linear-gradient(220deg, rgba(151,151,151,1) 0%, rgba(248,191,191,1) 100%);
-	
-}	
 
 .hero {
 	width: 23.5rem;
@@ -62,7 +54,6 @@ img {
 	width: 19.438rem;
 	height: 19.375rem;
 	margin: 4rem auto 5.75rem auto;
-	
 }
 
 .text-content h1 {
@@ -76,12 +67,6 @@ img {
 	transform: translateX(-100%);
 	animation: comeinleft 0.5s ease forwards;
 }
-
-/*@keyframes comeinleft {
-	to {
-		transform: translateX(0);
-	}
-}*/
 
 .text-content h1 span {
 	font-weight: 600;
@@ -101,21 +86,9 @@ img {
 	animation: comeinright 0.5s ease forwards;
 }
 
-/*@keyframes comeinright {
-	to {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}*/
-
 .form {
-	
 	position: relative;
-	
-	
 }
-
-
 
 .form input {
 	border-radius: 28px;
@@ -135,17 +108,6 @@ img {
 	animation: comeinleft 0.5s ease forwards;
 }
 
-/*form input {
-	background-color: transparent;
-	border: 1px solid hsl(0, 36%, 70%);
-	border-radius: 50%;
-	font-size: 16px;
-	padding: 15px;
-	width: 100%;
-} FOR DESKTOP*/
-
-
-
 .form input::placeholder {
 	color: #ce9898;
 	font-weight: 400;
@@ -153,27 +115,11 @@ img {
 	font-size: 0.875rem;
 	line-height: 2em;
 	padding: 0.78em 0 0.64em 0;
-	
-	
 }
 
 .form input:focus {
 	outline: none;
 }
-
-
-
-/*.form.error input {
-	border: 2px solid #F96464;
-	
-}
-.form.success input {
-	border: 2px solid hsl(0, 36%, 70%);
-	
-}*/
-
-
-
 
 
 .form small {
@@ -185,38 +131,16 @@ img {
 	font-size: 0.68rem;
 }
 
-
-
-/*.submit-arrow {
-	position: absolute;
-	right: 0;
-	bottom: 2.5%;
-	width: 4rem;
-	height: 3rem;
-	background: #EE8B8B url('./images/icon-arrow.svg') no-repeat right 50% center;
-	border-radius: 23px;
-	margin-right: -5px;
-	box-shadow: 0 6px 15px 0 #C66E6E;
-	z-index: 1;
-}*/
-
 .submit-arrow {
 	width: 1.5rem;
 	height: 2rem;
 }
-
-
-
-
-
 
 button {
 	box-shadow: 0 6px 15px 0 #C66E6E;
 	border:none;
 	width: 76px;
 	margin-left: 10px;
-	
-	
 }
 
 #submit-button {
@@ -231,22 +155,11 @@ button {
 	border-radius: 44px;
 	transition: all 0.5s ease-in-out;
 	border-color:hsl(0, 74%, 85%);
-	/*border: 1px solid hsl(0, 0%, 100%);*/
 	background: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 70%);
 	z-index: 1;
 	transform: translateX(-100%);
 	animation: comeinleft 0.5s ease forwards;
 }
-	/*box-shadow: 0 6px 15px 0 #C66E6E;*/
-	
-
-
-
-
-
-
-
-
 
 #submit-button:hover {
 	cursor: pointer;
@@ -255,15 +168,12 @@ button {
 	background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%,  hsl(0, 74%, 85%) 90%);
 }
 
-
-
 .error-icon {
 	position: absolute;
 	right: 90px;
-	top: 20px;
+	top: 15px;
 	width: 1rem;
 	height: 1rem;
-	
 }
 
 /* Animations */
@@ -281,6 +191,7 @@ button {
 	}
 }
 
+
 /*Footer */
 
 .attribution { 
@@ -290,14 +201,14 @@ button {
 }
 
 .attribution a { 
-	/*color: hsl(228, 45%, 44%); */
 	color: #C66E6E;
 	text-decoration: none;
 }
 
+
 /* Desktop Styles */
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 900px) {
 
 	body {
 		background-image: url(./images/bg-pattern-desktop.svg);
@@ -312,48 +223,42 @@ button {
 		min-height: 100vh;
 		width: 100%;
 		display: grid;
-		grid-template-areas: 
-		'a b' 
-		'c b' 
-		'd b';
-
+		grid-template-columns: 15% 55% 30%;
+		grid-template-rows: 25% 1fr 15%;
+		justify-items: start;
 	}
 
 	header {
-		grid-area: a;
-		width: 51.875rem;
-		height: 4.11rem;
-		justify-self: start;
-		padding-top: 1em;
-		
+		grid-column: 2;
+		grid-row: 1;
+		align-self: center;
 	}
+
 	.logo {
 		width: 9.875rem;
 		height: 2.063rem;
-		margin-left: 16em;
+		padding-left: 0;
+		margin-left: 0;
 	}
 
-	
-
 	.desktop-img {
-		grid-area: b;
+		grid-column: 3;
+		grid-row: 1 / 4;
 		background: url(./images/hero-desktop.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center center;
-	
-		
 		width: 45rem;
 		justify-self: end;
-		margin-right: 0em;
 	}
 
 	.main-content {
-		display: grid;
-		grid-area: c;
+		grid-column: 2;
+		grid-row: 2;
 		width: 51.875rem;
-		height: 25.25rem;
-		place-items: center;
+		height: 28rem;
+		margin: 0;
+		align-self: center;
 	}
 
 	.text-content {
@@ -378,22 +283,22 @@ button {
 	}
 
 	footer {
-		grid-area: d;
-		width: 51.875rem;
-		display: grid;
+		grid-column: 2;
+		grid-row: 3;
+		align-self: center;
 	}
 
 	.attribution {
 		width: 27.813rem;
 		justify-self: center;
-		margin-left: 5rem;
+		text-align: left;
 		font-size: 0.8rem;
 	}
 
 	.error-icon {
 		position: absolute;
 		right: 110px;
-		top: 30px;
+		top: 15px;
 		width: 1.5rem;
 		height: 1.5rem;
 	}
@@ -414,14 +319,11 @@ button {
 	}
 
 	.form small {
-		top: 78px;
-		left: 22px;
+		top: 67px;
+		left: 014x;
 		line-height: 215%;
 		font-size: 1rem;
 	}
-	
-
-
 }
 
 
